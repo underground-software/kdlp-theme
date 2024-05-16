@@ -15,7 +15,9 @@
 
 		<hr>
 		<div class="nav">
-			<a class="nav" href="/index.html">Home</a>
+			{% for item in site.data.navbar.items %}
+			<a class="nav" href="{{ item.url }}">{{ item.title }}</a>
+			{% endfor %}
 		</div>
 		<hr>
 		{{ content }}
